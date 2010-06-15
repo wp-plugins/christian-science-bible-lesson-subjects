@@ -4,7 +4,7 @@ Plugin Name: Christian Science Bible Lesson Subjects
 Plugin URI: http://sharethepractice.org/plugins/cs-subject-of-the-week/
 Description: Display upcoming Christian Science Bible Lesson subjects in a widget or using shortcode [cs_subject_of_the_week]
 Donate URI: http://bit.ly/cs-bible-lesson-plugin-donation
-Author: ShareThePractice.org
+Author: Gabriel Serafini (ShareThePractice.org)
 Author URI: http://sharethepractice.org/
 Version: 1.0
 

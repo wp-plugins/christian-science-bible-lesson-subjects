@@ -62,7 +62,7 @@ Optional shortcode parameters
 You can use this plugin in your themes if you wish instead of using it as a widget.
 
 Place into your theme to display list of upcoming subjects:
-`<?php if (function_exists('stp_getBibleLessonSubjects')) echo stp_getBibleLessonSubjects( 3, true, 30); ?>`
+`&lt;?php if (function_exists('stp_getBibleLessonSubjects')) echo stp_getBibleLessonSubjects( 3, true, 30); ?&gt;`
 
 Function parameters are ( weeks_to_display, display_more_info_link, thanksgiving_days_in_advance).  
 You can also call the function without parameters and the defaults will be used.
@@ -92,7 +92,7 @@ Add the following declarations to your stylesheet if you'd like to further custo
 
 = Is this provided by the Christian Science Publishing Society? =
 
-No, this has been coded by ShareThePractice.org for use by branch churches and societies.
+No, this has been coded by [ShareThePractice.org](http://sharethepractice.org/) for use by branch churches and societies.
 
 = Is support available? =
 
