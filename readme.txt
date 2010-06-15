@@ -1,7 +1,7 @@
 === Christian Science Bible Lesson Subjects ===
 Contributors: gserafini
 Donate link: http://bit.ly/cs-bible-lesson-plugin-donation
-Tags: cs, christian science, subjects, bible lesson, church
+Tags: cs, christian science, subjects, bible lesson, church, widget, sidebar, plugin
 Requires at least: 2.7
 Tested up to: 3.0
 Stable tag: 1.0
