@@ -3,8 +3,8 @@ Contributors: gserafini
 Donate link: http://bit.ly/cs-bible-lesson-plugin-donation
 Tags: cs, christian science, subjects, bible lesson, church, widget, sidebar, plugin
 Requires at least: 2.7
-Tested up to: 3.0
-Stable tag: 1.0
+Tested up to: 3.5
+Stable tag: 1.1
 
 Provides configurable widget and shortcode for displaying upcoming weekly Christian Science Bible Lesson subjects.
 
@@ -15,7 +15,7 @@ Display upcoming Christian Science Bible Lesson topics in any widget-enabled sid
 = Widget Features: =
 
 * Select number of upcoming subjects to display (default is 3 weeks)
-* Select whether to display 'more info' link to [Spirituality.com](http://www.spirituality.com/bible-lesson/ "More information about Bible Lessons at Spirituality.com")
+* Select whether to display 'more info' link to [ChristianScience.com](http://christianscience.com/prayer-and-health/the-bible-and-science-and-health/christian-science-bible-lesson "More information about Bible Lessons at ChristianScience.com")
 * Configure number of days in advance of Thanksgiving Day service to display explanatory message
 * Option to disable Thanksgiving Day message if desired
 
@@ -105,10 +105,16 @@ Yes, use the contact form on the ShareThePractice.org [website](http://sharethep
 
 == Changelog ==
 
+= 1.1 =
+* Fix to synchronize weekly Bible study lesson topics for 2013
+
 = 1.0 =
 * Initial release of plugin
 
 == Upgrade Notice ==
+
+= 1.1 =
+* Fix to synchronize weekly Bible study lesson topics for 2013
 
 = 1.0 =
 Initial Release
