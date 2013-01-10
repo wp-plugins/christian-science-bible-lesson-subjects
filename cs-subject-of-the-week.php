@@ -59,16 +59,17 @@ function stp_getSubject($date_to_use='now') {
 		"God the Only Cause and Creator",
 		"God the Preserver of Man",
 		"Is the Universe, Including Man, Evolved by Atomic Force?",
-		"Christian Science");
+		"Christian Science"
+		);
 	
 	// repeat the array since lesson subjects are repeated twice a year in the same order
 	$cs_lesson_subjects = array_merge($cs_lesson_subjects, $cs_lesson_subjects);
 
-	// Get the lesson for the upcoming next Sunday for any given date 
-	$week_num = (int) date('W', strtotime('next Sunday', strtotime($date_to_use)));
+	// Bonus lesson for years with 53 Sundays -- Still not sure if this is exactly the right way to do it. :/
+	$cs_lesson_subjects[] = "Christ Jesus";
 
-	// We have week #0-51 in array. weeks #52 and 53 should roll back to first subject
-	if ($week_num >= 52) $week_num = 0;
+	// Get the lesson for the upcoming next Sunday for any given date 
+	$week_num = (int) date('W', strtotime('next Sunday', strtotime($date_to_use)))-1;
 
 	return $cs_lesson_subjects[$week_num];
 
@@ -128,18 +129,17 @@ function stp_getBibleLessonSubjects( $weeks_to_display = 3, $display_more_info_l
 	$output  = "";
 	$output .= '<div class="stp_cs_bible_lesson_topics_widget">';
 	$output .= '<ul>';
-
 	for ($n=0; $weeks_to_display > $n; $n++) {
 
 		$output .= '<li>';
-		$date_to_use = 'now + ' . $n . 'week'; 
+		$date_to_use = 'now + ' . $n . 'week';
 		$output .= '<span class="stp_cs_bible_lesson_topics_date">' . date('n/j/Y', strtotime('next Sunday', strtotime($date_to_use))) . '</span> - <span class="stp_cs_bible_lesson_topics_subject">' . stp_getSubject($date_to_use) . '</span>';
 		$output .= '</li>';
 
 	}
 
 	if ('1' == $display_more_info_link) {
-		$output .= '<li class="stp_cs_bible_lesson_topics_more_info_link"><a href="http://www.spirituality.com/bible-lesson/" target="_blank">More info about the Bible Lesson &raquo;</a></li>';
+		$output .= '<li class="stp_cs_bible_lesson_topics_more_info_link"><a href="http://christianscience.com/prayer-and-health/the-bible-and-science-and-health/christian-science-bible-lesson" target="_blank">More info about the Bible Lesson &raquo;</a></li>';
 	}
 
 	$output .= '</ul>';
@@ -230,8 +230,7 @@ class STP_CS_Bible_Lesson_Topics extends WP_Widget {
 		$title = apply_filters( 'widget_title', empty($instance['title']) ? __('Upcoming Bible Lessons', 'christian-science-bible-lesson-subjects') : $instance['title'], $instance );
 		$weeks_to_display = apply_filters( 'widget_text', empty($instance['weeks_to_display']) ? __('3', 'christian-science-bible-lesson-subjects') : $instance['weeks_to_display'], $instance );
 		$thanksgiving_days_in_advance = apply_filters( 'widget_text', empty($instance['thanksgiving_days_in_advance']) ? __('30', 'christian-science-bible-lesson-subjects') : $instance['thanksgiving_days_in_advance'], $instance );
-		$display_more_info_link = apply_filters( 'widget_text', empty($instance['display_more_info_link']) ? 1 : $instance['display_more_info_link'], $instance );
-
+		$display_more_info_link = apply_filters( 'widget_text', $instance['display_more_info_link'], $instance );
 		// Output widget as long as we have at least 1 week's topic to display
 		if ($weeks_to_display > 0) {
 
@@ -284,7 +283,7 @@ class STP_CS_Bible_Lesson_Topics extends WP_Widget {
 		<input style="width: 60px;" id="<?php echo $this->get_field_id('weeks_to_display'); ?>" name="<?php echo $this->get_field_name('weeks_to_display'); ?>" type="text" value="<?php echo esc_attr($weeks_to_display); ?>" /></p>
 
 		<p><input id="<?php echo $this->get_field_id('display_more_info_link'); ?>" name="<?php echo $this->get_field_name('display_more_info_link'); ?>" type="checkbox" <?php checked(isset($instance['display_more_info_link']) ? $instance['display_more_info_link'] : 1); ?> />&nbsp;<label for="<?php echo $this->get_field_id('display_more_info_link'); ?>"><?php _e('Display more info link', 'christian-science-bible-lesson-subjects'); ?></label><br />
-		<a href="http://www.spirituality.com/bible-lesson/" target="_blank">More info about the Bible Lesson</a></p>
+		<a href="http://christianscience.com/prayer-and-health/the-bible-and-science-and-health/christian-science-bible-lesson" target="_blank">More info about the Bible Lesson</a></p>
 
 		<p style="border-top: 1px solid #eee; margin: 10px 0 8px 0; padding: 6px 0 0 0;"><strong>Special Thanksgiving day message:</strong></p>		
 		<p><?php echo stp_getThanksgivingMessage(365); ?></p>

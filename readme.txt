@@ -106,7 +106,9 @@ Yes, use the contact form on the ShareThePractice.org [website](http://sharethep
 == Changelog ==
 
 = 1.1 =
-* Fix to synchronize weekly Bible study lesson topics for 2013
+* Fix to re-synchronize weekly Bible study lesson topics for 2013
+* Fix widget so it correctly shows the More Info link depending on user input in widget options
+* Update [More info about Bible Lesson link](http://christianscience.com/prayer-and-health/the-bible-and-science-and-health/christian-science-bible-lesson)
 
 = 1.0 =
 * Initial release of plugin
