@@ -3,7 +3,7 @@ Contributors: gserafini
 Donate link: http://bit.ly/cs-bible-lesson-plugin-donation
 Tags: cs, christian science, subjects, bible lesson, church, widget, sidebar, plugin
 Requires at least: 2.7
-Tested up to: 3.9
+Tested up to: 4.2
 Stable tag: 1.1
 
 Provides configurable widget and shortcode for displaying upcoming weekly Christian Science Bible Lesson subjects.
